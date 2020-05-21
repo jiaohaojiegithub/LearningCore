@@ -1,0 +1,74 @@
+{
+  "mx_Attributes": [
+    {   
+      "AttributeName": "男",
+      "AttributeValue": "男",
+      "AttributeType": "性别",
+      "Description": "性别",
+      "Id": 0,
+      "CreatedUserId": 0,
+      "CreatedUserName": null,
+      "CreatedTime": "2020-05-19T13:12:40.7803675+08:00",
+      "IsDeleted": false,
+      "ModifiedTime": "2020-05-19T13:12:40.7803546+08:00"
+    },
+    {     
+      "AttributeName": "女",
+      "AttributeValue": "女",
+      "AttributeType": "性别",
+      "Description": "性别",
+      "Id": 0,
+      "CreatedUserId": 0,
+      "CreatedUserName": null,
+      "CreatedTime": "2020-05-19T13:12:40.7803812+08:00",
+      "IsDeleted": false,
+      "ModifiedTime": "2020-05-19T13:12:40.7803801+08:00"
+    }
+  ],
+  "movies": [
+    {
+      "Title": "When Harry Met Sally",
+      "Genre": "Romantic Comedy",
+      "Price": 7.99,
+      "Id": 0,
+      "CreatedUserId": 0,
+      "CreatedUserName": null,
+      "CreatedTime": "0001-01-01T00:00:00",
+      "IsDeleted": false,
+      "ModifiedTime": "1989-02-12T00:00:00"
+    },
+    {
+      "Title": "Ghostbusters ",
+      "Genre": "Comedy",
+      "Price": 8.99,
+      "Id": 0,
+      "CreatedUserId": 0,
+      "CreatedUserName": null,
+      "CreatedTime": "0001-01-01T00:00:00",
+      "IsDeleted": false,
+      "ModifiedTime": "1984-03-13T00:00:00"
+    },
+    {
+      "Title": "Ghostbusters 2",
+      "Genre": "Comedy",
+      "Price": 9.99,
+      "Id": 0,
+      "CreatedUserId": 0,
+      "CreatedUserName": null,
+      "CreatedTime": "0001-01-01T00:00:00",
+      "IsDeleted": false,
+      "ModifiedTime": "1986-02-23T00:00:00"
+    },
+    {
+      "Title": "Rio Bravo",
+      "Genre": "Western",
+      "Price": 3.99,
+      "Id": 0,
+      "CreatedUserId": 0,
+      "CreatedUserName": null,
+      "CreatedTime": "0001-01-01T00:00:00",
+      "IsDeleted": false,
+      "ModifiedTime": "1959-04-15T00:00:00"
+    }
+  ]
+}
