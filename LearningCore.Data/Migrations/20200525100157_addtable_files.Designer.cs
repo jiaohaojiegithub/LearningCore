@@ -4,14 +4,16 @@ using LearningCore.Service;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LearningCore.Data.Migrations
 {
     [DbContext(typeof(LearningCoreContext))]
-    partial class LearningCoreContextModelSnapshot : ModelSnapshot
+    [Migration("20200525100157_addtable_files")]
+    partial class addtable_files
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

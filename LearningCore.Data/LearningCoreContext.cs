@@ -1,5 +1,6 @@
 ﻿
 using LearningCore.Data;
+using LearningCore.Data.MVCModels;
 using LearningCore.Data.RazorModels;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -25,6 +26,8 @@ namespace LearningCore.Service
         public DbSet<TodoItem> TodoItems { get; set; }
 
         public DbSet<Product> products { get; set; }
+
+        public DbSet<AppFile> Files { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             => optionsBuilder
                 .UseSqlServer(

@@ -9,6 +9,7 @@ using LearningCore.Data;
 using LearningCore.Service;
 using LearningCore.Common.Extentions;
 using System.Text.Json;
+using Microsoft.Extensions.Logging;
 
 namespace LearningCore.Api.Controllers
 {
@@ -18,9 +19,13 @@ namespace LearningCore.Api.Controllers
     {
         private readonly LearningCoreContext _context;
 
-        public TodoItemsController(LearningCoreContext context)
+        public ILogger<TodoItemsController> _logger { get; }
+
+        public TodoItemsController(LearningCoreContext context
+            ,ILogger<TodoItemsController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         // GET: api/TodoItems
@@ -79,6 +84,7 @@ namespace LearningCore.Api.Controllers
                 }
                 else
                 {
+                  
                     throw;//new Exception("");
                 }
             }
