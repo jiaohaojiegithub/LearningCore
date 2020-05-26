@@ -52,7 +52,8 @@ namespace LearningCore.Api
                 ;
             #region 自定义注入
             services.Configure<WxConfigModel>(Configuration.GetSection("WxConfig"));//WxConfig注入
-            services.AddTransient<IMyScopedService, MyScopedService>();
+            //services.AddTransient<IMyScopedService, MyScopedService>();
+            services.UseMyService();
             #endregion
             #region 注入Swagger
             services.AddSwaggerDocument(config =>

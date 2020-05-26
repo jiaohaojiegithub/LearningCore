@@ -4,6 +4,8 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using LearningCore.Data;
+using LearningCore.Data.MVCModels;
+using LearningCore.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -23,14 +25,17 @@ namespace LearningCore.Api.Controllers
         private readonly ILogger<WeatherForecastController> _logger;
         private readonly IConfiguration _configuration;
         private readonly IOptions<WxConfigModel> _wxConfig;
+        private readonly IFilesService _filesService;
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger
             , IConfiguration configuration
-            , IOptions<WxConfigModel> wxConfig)
+            , IOptions<WxConfigModel> wxConfig
+            , IFilesService filesService)
         {
             _logger = logger;
             _configuration = configuration;
             _wxConfig = wxConfig;
+            _filesService = filesService;
         }
 
         [HttpGet]
@@ -66,6 +71,11 @@ namespace LearningCore.Api.Controllers
         public string GetWxConfig()
         {
             return _wxConfig.Value.AppSecret;
+        }
+        [HttpGet("GetFilesList")]
+        public Task<IEnumerable<AppFile>> GetFilesList()
+        {           
+            return _filesService.GetList();
         }
         /// <summary>
         /// 顶级节点验证

@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LearningCore.Data\LearningCore.Data.csproj" />
+  </ItemGroup>
+
 </Project>
